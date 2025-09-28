@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+
+
+<!-- Q2: Cyber Security Question -->
+
+<topic name="code">
+    <category>
+        <pattern><set>affirmative</set></pattern>
+            <template>
+            <think><set name="likes_code">yes</set><set name="topic">SECURITY</set></think>
+            <b>Quest 2:</b><br/>
+            Do you yearn to defend digital kingdoms, outwit cyber villains, and guard the sacred vaults of privacy?
+            <br/><br/>
+            <b>Enter YES or NO</b>
+        </template>
+    </category>
+    <category>
+        <pattern><set>negative</set></pattern>
+            <template>
+            <think><set name="likes_code">no</set><set name="topic">SECURITY</set></think>
+            <b>Quest 2:</b><br/>
+            Do you yearn to defend digital kingdoms, outwit cyber villains, and guard the sacred vaults of privacy?
+            <br/><br/>
+            <b>Enter YES or NO</b>
+        </template>
+    </category>
+</topic>
+
+<!-- Q3: Networking  -->
+
+<topic name="SECURITY">
+    <category>
+        <pattern><set>affirmative</set></pattern>
+            <template>
+            <think><set name="likes_security">yes</set><set name="topic">Networking</set></think>
+            <b>Quest 3:</b><br/>
+             Do you enjoy working with networks and infrastructure, keeping systems humming like enchanted machines in a wizard’s tower? 
+            <br/><br/>
+            <b>Enter YES or NO</b>
+            </template>
+    </category>
+
+    <category>
+        <pattern><set>negative</set></pattern>
+            <template>
+            <think><set name="likes_security">no</set><set name="topic">Networking</set></think>
+            <b>Quest 3:</b><br/>
+            Do you enjoy working with networks and infrastructure, keeping systems humming like enchanted machines in a wizard’s tower? 
+            <br/><br/>
+            <b>Enter YES or NO</b>
+        </template>
+    </category>
+</topic>
+
+
+<!-- Q4: OPS / Networking -->
+
+<topic name="Networking">
+    <category>
+        <pattern><set>affirmative</set></pattern>
+            <template>
+            <think><set name="likes_networking">yes</set><set name="topic">OPS</set></think>
+            <b>Quest 4:</b><br/>
+            Do you enjoy gathering with wise stakeholders at the round table, translating cryptic data scrolls into insights even non-wizards can understand?
+            <br/><br/>
+            <b>Enter YES or NO</b>
+            </template>
+    </category>
+    <category>
+        <pattern><set>negative</set></pattern>
+            <template>
+            <think><set name="likes_networking">no</set><set name="topic">OPS</set></think>
+            <b>Quest 4:</b><br/>
+             Do you enjoy gathering with wise stakeholders at the round table, translating cryptic data scrolls into insights even non-wizards can understand?
+             <br/><br/>
+            <b>Enter YES or NO</b>
+            </template>
+    </category>
+</topic>
+
+<!-- Q5: Result -->
+
+<topic name="OPS">
+  
+  <category>
+       <pattern><set>affirmative</set></pattern>
+            <template>
+            <think>
+            <set name="likes_ops">yes</set>
+            <set name="topic">RESULTS</set> <!-- switch topics -->
+            </think>
+      <srai>RESULTS</srai>
+            </template>
+  </category>
+
+  
+  <category>
+       <pattern><set>negative</set></pattern>
+           <template>
+            <think>
+            <set name="likes_ops">no</set>
+            <set name="topic">RESULTS</set> <!-- switch topics -->
+            </think>
+      <srai>RESULTS</srai>
+           </template>
+  </category>
+</topic>
+
+
+<topic name="RESULTS">
+     <category>
+         <pattern>RESULTS</pattern>
+          <template>
+            Based on your answers, here are the strong matches:
+        <br/><br/>
+            <condition name="likes_security">
+            <li value="yes">CYBERSECURITY ANALYST<br/>you enjoy protecting systems and privacy.</li>
+            </condition>
+        <br/><br/>
+            <condition name="likes_networking">
+            <li value="yes">NETWORK ENGINEER<br/>you like infrastructure and smooth operations.</li>
+            </condition>
+        <br/><br/>
+            <condition name="likes_ops">
+            <li value="yes">DATA ANALYST<br/>you enjoy patterns, insight, and communication.</li>
+            </condition>
+        <br/><br/>
+            <condition name="likes_code">
+            <li value="yes">SOFTWARE DEVELOPER<br/>you like building apps and tools.</li>
+            </condition>
+
+        <br/><br/>
+            AI/ML ENGINEER<br/>great if you like coding and math for smart systems.
+
+      <br/><br/>Type any job title above to learn more, type jobs to sell all.
+    </template>
+  </category>
+</topic>
+
+
+
+
+
+
+
+</aiml>

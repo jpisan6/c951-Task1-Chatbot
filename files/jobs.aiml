@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+
+
+
+<!-- SOFTWARE DEVELOPER -->
+<category>
+    <pattern>SOFTWARE</pattern>
+    <template><srai>SOFTWARE DEVELOPER</srai></template>
+</category>
+
+<category>
+    <pattern>SOFTWARE DEVELOPER</pattern>
+        <template>
+        <b>Software Developer</b>
+            <br/>
+            What you'll do: build and debug applications/services; collaborate via version control; write tests.
+            <br/><br/>
+            Typical tools/skills: Python/Java/JS, Git/GitHub, SQL, REST/HTTP, testing (pytest/JUnit), Agile.
+            <br/><br/>
+            Entry-level titles: Junior Developer, Software Engineer I, QA Engineer, SDET.
+            <br/><br/>
+            Early steps: complete 2–3 portfolio projects, contribute to open source, practice coding interviews.
+        </template>
+</category>
+
+
+
+<!-- DATA ANALYST -->
+<category>
+    <pattern>DATA ANALYST</pattern>
+        <template><srai>DATA ANALYST</srai></template>
+</category>
+
+<category>
+    <pattern>DATA ANALYST</pattern>
+        <template>
+        <b>Data Analyst</b>
+            <br/>
+            What you'll do: clean/prepare data, build dashboards, communicate insights to stakeholders.
+            <br/><br/>
+            Typical tools/skills: SQL, spreadsheets, Python (pandas), visualization (Tableau/Power BI), stats basics.
+            <br/><br/>
+            Entry-level titles: Data Analyst, BI Analyst, Reporting Analyst.
+            <br/><br/>
+            Early steps: build a small analytics portfolio (dashboards + write-ups), learn SQL joins/window functions.
+        </template>
+</category>
+
+<!-- NETWORK ENGINEER -->
+<category>
+    <pattern>NETWORKING</pattern>
+        <template><srai>NETWORK ENGINEER</srai></template>
+</category>
+
+<category>
+    <pattern>NETWORK ENGINEER</pattern>
+    <template>
+        <b>Network Engineer</b>
+        <br/>
+        What you'll do: design and maintain LAN/WAN/Wi‑Fi, routing/switching, troubleshooting connectivity.
+        <br/><br/>
+        Typical tools/skills: TCP/IP, VLANs, routing protocols (OSPF/BGP), firewalls, Wi‑Fi design, monitoring (SNMP).
+        <br/><br/>
+        Entry-level titles: Network Technician, NOC Technician, Junior Network Engineer.
+        <br/><br/>
+        Early steps: home lab, packet tracer, study for CCNA‑level fundamentals.
+    </template>
+</category>
+
+<!-- CYBERSECURITY ANALYST -->
+<category>
+    <pattern>CYBER SECURITY</pattern>
+    <template><srai>CYBER SECURITY ANALYST</srai></template>
+</category>
+
+<category>
+    <pattern>CYBER SECURITY ANALYST</pattern>
+        <template>
+        <b>Cyber Security Analyst</b><br/>
+        What you'll do: monitor threats, analyze alerts, harden systems, assist with incident response/compliance.
+        <br/><br/>
+        Typical tools/skills: security fundamentals, SIEM, vulnerability scanning, identity management, OS hardening.
+        <br/><br/>
+        Entry-level titles: SOC Analyst (Tier 1), Information Security Analyst, GRC Analyst.
+        <br/><br/>
+        Early steps: lab practice (VMs), security projects, basic scripting, learn logs/alerts triage.
+        </template>
+</category>
+
+
+<!-- AI/ML ENGINEER -->
+
+<category>
+    <pattern>AI ENGINEEER</pattern>
+        <template><srai>AI ENGINEER</srai></template>
+</category>
+
+<category>
+    <pattern>AI</pattern>
+    <template><srai>AI ENGINEER</srai></template>
+</category>
+
+<category>
+    <pattern>AI/ML ENGINEER</pattern>
+        <template>
+        <b>AI/ML Engineer</b>
+        <br/><br/>
+        What you'll do: build data pipelines and models, evaluate performance, integrate models into apps/APIs.
+        <br/><br/>
+        Typical tools/skills: Python, NumPy/pandas, scikit‑learn, notebooks, basic linear algebra/probability.
+        <br/><br/>
+        Entry-level titles: ML Engineer (Junior), Applied Scientist (Intern/Junior), Data Scientist (Junior).
+        <br/><br/>
+        Early steps: ML mini‑projects, end‑to‑end model demos, responsible AI basics.
+        </template>
+</category>
+
+
+
+</aiml>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>Sorry, I did not get that. 
+    <br/><br/>
+    But,  I am here to help find careers in the Computer Science field. 
+    <br/><br/>
+    You can try typing: 
+     <b> Jobs, Quest, or Menu</b>
+    </template>
+  </category>
+</aiml>

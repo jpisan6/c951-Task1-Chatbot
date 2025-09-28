@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+
+
+<category>
+  <pattern>HELP</pattern>
+  <template>
+     Try: "quest", "jobs", or "menu".
+  </template>
+</category>
+
+<category>
+  <pattern><set>reset</set></pattern>
+  <template>
+    Sounds good lets start from the begining!…
+    <think>
+      <!-- clear stored state -->
+      <set name="name"/>
+      <set name="topic"/>
+      <set name="likes_code"/>
+      <set name="likes_security"/>
+      <set name="likes_networking"/>
+      <set name="likes_ops"/>
+    </think>
+    <!-- jump to your greeting flow -->
+    <srai>hi</srai>
+  </template>
+</category>
+
+
+<!-- Names and introductions-->
+
+
+<category>
+  <pattern>hi</pattern>
+  <template>
+    Hi, I am Duende a IT Career specialist. 
+    <br/><br/>May I please have your name?
+    <think><set name="topic">GETNAME</set></think>
+  </template>
+</category>
+
+
+<topic name="GETNAME">
+
+  
+  <category>
+    <pattern>NO, MY NAME IS *</pattern>
+    <template>
+      <think>
+        <set name="name"><star/></set>
+        <set name="topic"></set>
+      </think>
+      Nice to meet you, <get name="name"/>! Let me take you on a short quest to find a good-fit career!
+      <br/><br/>Type: 'YES' to go on Quest or 'NO' to see options
+      <br/><br/>If I got your name wrong type: "No, my name is 'name'".
+    </template>
+  </category>
+
+  <!-- reset name if already stored -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <think>
+        <set name="name"><star/></set>
+        <set name="topic"></set>
+      </think>
+      Nice to meet you, <get name="name"/>! Let me take you on a short quest to find a good-fit career!
+      <br/><br/>Type: 'YES' to go on Quest or 'NO' to see options
+      <br/><br/>If I got your name wrong type: "No, my name is 'name'".
+    </template>
+  </category>
+
+</topic>
+
+
+<category>
+    <pattern><set>affirmative</set></pattern>
+        <template>
+        <think><set name="topic">code</set></think>
+        <b>Quest 1:</b>
+        <br/>
+        Do you get a thrill from writing code and conjuring apps or tools like a caffeinated wizard?<br/><br/>
+        <b>Enter YES or NO</b>
+        </template>
+</category>
+
+
+<category>
+    <pattern><set>negative</set></pattern>
+        <template>
+        <b>No problem!</b>  
+        <br/>
+        Type 'menu' to browse career areas, or type 'quest' anytime to start the epic quest.
+        </template>
+</category>
+
+
+<!--Start Quest Manual -->
+
+<category>
+    <pattern>QUEST</pattern>
+        <template><think><set name="topic">code</set></think>
+        <b>Quest 1:</b>
+        <br/>
+            Do you get at thrill from writing code and conjuring apps or tools like a caffeniated wizard?
+            <br/><br/> 
+            <b> Enter YES or NO </b>
+        </template>
+</category>
+
+
+<!-- Jobs keyword reveals list -->
+<category>
+    <pattern><set>jobs</set></pattern>
+        <template>
+        Here are 5 CS Undergrand Friendly jobs. 
+        <br/><br/>
+        1. SOFTWARE DEVELOPER
+        <br/>
+        2. DATA ANALYST
+        <br/>
+        3. NETWORK ENGINEER
+        <br/>
+        4. CYBERSECURITY ANALYST
+        <br/>
+        5. AI/ML ENGINEER
+        <br/><br/>
+        Type any to learn more, or type MENU.
+        </template>
+</category>
+
+<!--  Menu -->
+<category>
+    <pattern><set>menu</set></pattern>
+        <template> <b>Menu</b>
+        Here are some areas to look at: <br/><br/>SOFTWARE DEVELOPMENT,<br/> DATA,<br/> NETWORKING,<br/>CYBERSECURITY, or <br/> AI/ML.
+        <br/><br/>
+        Just type in the name of the area you want to look at. 
+        </template>
+</category>
+
+<!--Repeat last-->
+<category>
+    <pattern>WHAT DID YOU JUST SAY</pattern>
+    <template><that/></template>
+</category>
+
+</aiml>
